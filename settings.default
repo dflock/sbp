@@ -30,3 +30,14 @@ _sbp_timestamp_format=%H:%M:%S
 
 # Switches for enabling and disabling functionality.
 _sbp_path_disable_sep=0
+
+# Attempt to default location of git-prompt script.
+if [ -d /usr/local/etc/bash_completion.d/ ] ; then
+  _sbp_git_prompt_location='/usr/local/etc/bash_completion.d/git-prompt.sh'
+fi
+if [ -d /usr/share/git/completion/ ] ; then
+  _sbp_git_prompt_location='/usr/share/git/completion/git-prompt.sh'
+fi
+if [ -f ~/.git-prompt.sh ] ; then
+  _sbp_git_prompt_location="~/.git-prompt.sh"
+fi
