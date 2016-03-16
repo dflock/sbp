@@ -24,6 +24,10 @@ _sbp_path_color_fg="$_sbp_color_white"
 _sbp_path_color_sep="$_sbp_color_grey"
 _sbp_timestamp_color_bg="$_sbp_color_dgrey"
 _sbp_timestamp_color_fg="$_sbp_color_lgrey"
+_sbp_return_code_bg="$_sbp_color_red"
+_sbp_return_code_fg="$_sbp_color_white"
+_sbp_path_color_readonly_fg="$_sbp_color_white"
+_sbp_path_color_readonly_bg="$_sbp_color_red"
 
 # Timestamp format.
 _sbp_timestamp_format=%H:%M:%S
