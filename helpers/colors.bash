@@ -6,10 +6,13 @@ _sbp_color_grey=244
 _sbp_color_dgrey=238
 _sbp_color_lgrey=250
 _sbp_color_green=148
+_sbp_color_dgreen=22
+_sbp_color_pink=161
+_sbp_color_orange=166
 _sbp_color_empty=-1
 _sbp_color_reset='\[\e[00m\]'
 
-## Color functions 
+## Color functions
 function _sbp_color_print_escaped() { # prints ansi escape codes for fg and bg (optional)
   local fg_code fg_escaped bg_code bg_escaped
   fg_code=$1
@@ -25,4 +28,3 @@ function _sbp_color_print_escaped() { # prints ansi escape codes for fg and bg (
     echo -e "${fg_escaped}${bg_escaped}"
   fi
 }
-
