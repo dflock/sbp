@@ -37,3 +37,6 @@ source "$sbp_path"/segments/return_code.bash
 
 # shellcheck source=segments/path_read_only.bash
 source "$sbp_path"/segments/path_read_only.bash
+
+# shellcheck source=segments/python_virtual_env.bash
+source "$sbp_path"/segments/python_virtual_env.bash

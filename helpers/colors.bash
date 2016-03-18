@@ -12,7 +12,7 @@ _sbp_color_orange=166
 _sbp_color_empty=-1
 _sbp_color_reset='\[\e[00m\]'
 
-## Color functions
+## Color functions 
 function _sbp_color_print_escaped() { # prints ansi escape codes for fg and bg (optional)
   local fg_code fg_escaped bg_code bg_escaped
   fg_code=$1

@@ -38,6 +38,8 @@ _sbp_return_code_fg="$_sbp_color_white"
 
 _sbp_path_color_readonly_fg="$_sbp_color_white"
 _sbp_path_color_readonly_bg="$_sbp_color_red"
+_sbp_python_virtual_env_bg="$_sbp_color_dgreen"
+_sbp_python_virtual_env_fg="$_sbp_color_white"
 
 # Timestamp format.
 _sbp_timestamp_format=%H:%M:%S
