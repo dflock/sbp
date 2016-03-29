@@ -17,9 +17,7 @@ fi
 
 function _sbp_generate_segments() {
   local left_segment_color
-  _sbp_prompt_left_length=0
   _sbp_prompt_left_value=
-  _sbp_prompt_right_length=0
   _sbp_prompt_right_value=
   _sbp_prompt_current_color=
   _sbp_segment_sep_orientation=right

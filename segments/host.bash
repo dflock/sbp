@@ -18,6 +18,5 @@ function _sbp_generate_host_segment {
     _sbp_segment_new_color_bg="$_sbp_host_color_bg"
   fi
   _sbp_segment_new_value=" ${host_value} "
-  _sbp_segment_new_length="$(( ${#host_value} + 2 ))"
   _sbp_segment_new_create
 }

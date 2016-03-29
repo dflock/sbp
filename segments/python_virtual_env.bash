@@ -11,7 +11,6 @@ function _sbp_generate_python_virtual_env_segment() {
   if [[ -n "$segment_value" ]]; then
     _sbp_segment_new_color_bg="$_sbp_python_virtual_env_bg"
     _sbp_segment_new_color_fg="$_sbp_python_virtual_env_fg"
-    _sbp_segment_new_length="$(( ${#segment_value} + 2 ))"
     _sbp_segment_new_value=" ${segment_value} "
     _sbp_segment_new_create
   fi

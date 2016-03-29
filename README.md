@@ -1,6 +1,7 @@
 # SBP - Simple Bash Prompt
+[![Build Status](https://travis-ci.org/brujoand/sbp.svg?branch=master)](https://travis-ci.org/brujoand/sbp)
 
-Simple Bash Prompt (SBP) is a bash prompt, which strives to be simple. But it isn't. But it looks kind of nice. I think. 
+Simple Bash Prompt (SBP) is a bash prompt, which was simple once.
 This started out as a pure ripoff from powerline-shell, which is great, but written in python.
 SBP is all bash, which makes it fast and fun.
 
@@ -43,6 +44,9 @@ Segments are the parts that make up the prompt. So you can add/remove/swap etc.
 - Host; shows the username and maybe host depending on your settings
 - Path; shows the path
 - Git; shows the git branch and status
+- Python; shows the virtual env settings for current folder
+- Path; shows a if current path is read only
+- Exit; shows the value of the last exitcode
 - Filler; fills the space between the left and right part of the prompt, if you like that kind of thing
 - Command; shows the time spent on the last command, and turns red if it failed 
 - Timestamp; shows a timestamp

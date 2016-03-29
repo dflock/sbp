@@ -5,7 +5,7 @@ _sbp_settings_hooks=('timer' 'alert')
 # Segments are generated bofere each prompt and can
 # be added, removed and reordered
 # Run 'sbp segments' to list all available segments
-_sbp_settings_segments_left=('host' 'path' 'git')
+_sbp_settings_segments_left=('host' 'path' 'python_virtual_env' 'git')
 _sbp_settings_segments_right=('command' 'timestamp')
 
 # Colors can be changed at will. Run 'sbp colors'
@@ -14,6 +14,7 @@ _sbp_settings_prompt_ready_color="$_sbp_color_dgrey"
 
 _sbp_command_color_bg="$_sbp_color_lgrey"
 _sbp_command_color_fg="$_sbp_color_dgrey"
+_sbp_command_color_fg_fail="$_sbp_color_lgrey"
 
 _sbp_filler_color_bg="$_sbp_color_empty"
 _sbp_filler_color_fg="$_sbp_color_empty"
@@ -46,14 +47,7 @@ _sbp_timestamp_format=%H:%M:%S
 
 # Switches for enabling and disabling functionality.
 _sbp_path_disable_sep=0
+_sbp_path_max_length=30
 
-# Attempt to default location of git-prompt script.
-if [ -d /usr/local/etc/bash_completion.d/ ] ; then
-  _sbp_git_prompt_location='/usr/local/etc/bash_completion.d/git-prompt.sh'
-fi
-if [ -d /usr/share/git/completion/ ] ; then
-  _sbp_git_prompt_location='/usr/share/git/completion/git-prompt.sh'
-fi
-if [ -f ~/.git-prompt.sh ] ; then
-  _sbp_git_prompt_location="~/.git-prompt.sh"
-fi
+# Git segments settings
+_sbp_git_max_length=20

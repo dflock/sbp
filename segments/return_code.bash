@@ -9,7 +9,6 @@ function _sbp_generate_return_code_segment {
 
     _sbp_segment_new_color_bg="$_sbp_return_code_bg"
     _sbp_segment_new_color_fg="$_sbp_return_code_fg"
-    _sbp_segment_new_length="$(( ${#command_value} + 2 ))"
     _sbp_segment_new_value=" ${command_value} "
     _sbp_segment_new_create
   fi
