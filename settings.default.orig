@@ -11,23 +11,37 @@ _sbp_settings_segments_right=('command' 'timestamp')
 # Colors can be changed at will. Run 'sbp colors'
 # to list all available colors
 _sbp_settings_prompt_ready_color="$_sbp_color_dgrey"
+<<<<<<< HEAD
+
+||||||| merged common ancestors
+=======
 _sbp_settings_prompt_ready_color_bg="$_sbp_color_empty"
+>>>>>>> master
 _sbp_command_color_bg="$_sbp_color_lgrey"
 _sbp_command_color_fg="$_sbp_color_dgrey"
 _sbp_command_color_fg_fail="$_sbp_color_lgrey"
+
 _sbp_filler_color_bg="$_sbp_color_empty"
 _sbp_filler_color_fg="$_sbp_color_empty"
-_sbp_git_color_bg="$_sbp_color_green"
-_sbp_git_color_fg="$_sbp_color_dgrey"
+
+_sbp_repo_color_clean_bg="$_sbp_color_green"
+_sbp_repo_color_clean_gg="$_sbp_color_dgrey"
+_sbp_repo_color_dirty_bg="$_sbp_color_pink"
+_sbp_repo_color_dirty_fg="$_sbp_color_white"
+
 _sbp_host_color_bg="$_sbp_color_dgrey"
 _sbp_host_color_fg="$_sbp_color_lgrey"
+
 _sbp_path_color_bg="$_sbp_color_blue"
 _sbp_path_color_fg="$_sbp_color_white"
 _sbp_path_color_sep="$_sbp_color_grey"
+
 _sbp_timestamp_color_bg="$_sbp_color_dgrey"
 _sbp_timestamp_color_fg="$_sbp_color_lgrey"
+
 _sbp_return_code_bg="$_sbp_color_red"
 _sbp_return_code_fg="$_sbp_color_white"
+
 _sbp_path_color_readonly_fg="$_sbp_color_white"
 _sbp_path_color_readonly_bg="$_sbp_color_red"
 _sbp_python_virtual_env_bg="$_sbp_color_dgreen"

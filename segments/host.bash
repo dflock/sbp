@@ -1,22 +1,17 @@
-### Defaults
-_sbp_host_color_bg=${_sbp_host_color_bg:-$_sbp_color_dgrey}
-_sbp_host_color_fg=${_sbp_host_color_fg:-$_sbp_color_lgrey}
+#! /usr/bin/env bash
 
-function _sbp_generate_host_segment {
-  local host_value
-  if [[ -n "$SSH_CLIENT" ]]; then
-    host_value="${USER}@${HOSTNAME}"
-  else
-    host_value="${USER}"
-  fi
+if [[ -n "$SSH_CLIENT" ]]; then
+  host_value="${USER}@${HOSTNAME}"
+else
+  host_value="${USER}"
+fi
 
-  if [[ "$(id -u)" -eq 0 ]]; then
-    _sbp_segment_new_color_fg="0"
-    _sbp_segment_new_color_bg="1"
-  else
-    _sbp_segment_new_color_fg="$_sbp_host_color_fg"
-    _sbp_segment_new_color_bg="$_sbp_host_color_bg"
-  fi
-  _sbp_segment_new_value=" ${host_value} "
-  _sbp_segment_new_create
-}
+if [[ "$(id -u)" -eq 0 ]]; then
+  host_color_fg="0"
+  host_color_bg="1"
+else
+  host_color_fg="$settings_host_color_fg"
+  host_color_bg="$settings_host_color_bg"
+fi
+
+pretty_print_segment "$host_color_fg" "$host_color_bg" " ${host_value} "

@@ -1,0 +1,19 @@
+#! /usr/bin/env bash
+set -e
+bauta_url='https://raw.githubusercontent.com/brujoand/bauta/master/bin/bauta'
+test_dir=$( cd "$( dirname "${BASH_SOURCE[0]}")/../tests" && pwd )
+test_script="${test_dir}/bauta"
+
+if [[ ! -f "$test_script" ]]; then
+  echo "Downloading bauta test script"
+  curl -s -o "$test_script" "$bauta_url"
+fi
+
+if [[ ! -x "$test_script" ]]; then
+  echo "Making $test_script executable"
+  chmod +x "$test_script"
+fi
+
+echo "Running tests"
+sbp_path=$( cd "$( dirname "${BASH_SOURCE[0]}")/.." && pwd )
+sbp_path="$sbp_path" "${test_script}" "${test_dir}"

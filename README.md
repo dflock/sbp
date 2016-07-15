@@ -5,7 +5,7 @@ Simple Bash Prompt (SBP) is a bash prompt, which was simple once.
 This started out as a pure ripoff from powerline-shell, which is great, but written in python.
 SBP is all bash, which makes it fast and fun.
 
-I've tried making the code as readable and extendable as possible. 
+I've tried making the code as readable and extendable as possible.
 If something seems wrong, lacking or bad in some way; feel free to rant, review and create a pull request.
 
 ![Screenshot](https://raw.githubusercontent.com/brujoand/sbp/master/resources/timer.png)
@@ -19,13 +19,13 @@ All done?
 Great :)
 
 ## Installing
-There is an install script, you could use that. It will copy the settings.default to ~/.sbp, and it will ask you
-to set the ```sbp_path``` variable to point to the install location and to source the sbp.bash file. So you could just do that.
+There is an install script, you could use that. It will copy the default settings to ~/.config/sbp/sbp.conf, and it will ask you
+to set the ```sbp_path``` variable to point to the install location and to source the sbp.conf file. So you could just do that.
 Or run the install script. Up to you. It's nothing fancy.
 
 ## Usage
 So you're ready to go. Now you do nothing. Just use it. But you could. If you want. Change stuff up a bit.
-Just try stuff out in ~/.sbp and run ```sbp reload```
+Just try stuff out in ~/.config/sbp and run ```sbp reload```
 If all is well you can use the ```sbp``` command:
 ```
 Usage: sbp <command>
@@ -34,7 +34,6 @@ Commands:
 segments  - List all available segments
 hooks     - List all available hooks
 colors    - List all defined colors
-powerline - Toggle the use of powerline fonts
 reload    - Reload SBP and user settings
 ```
 
@@ -58,6 +57,6 @@ Hooks will run once before each prompt is presented. They can also be enabled/di
 
 ## FAQ (singular)
 Can I not use powerline fonts?
-  - Yes, just run ```sbp powerline``` to toggle the use of powerline fonts.
+  - Yes, just change the 'settings_char_*' settings.
 
 ![Screenshot](https://raw.githubusercontent.com/brujoand/sbp/master/resources/powerline-toggle.png)

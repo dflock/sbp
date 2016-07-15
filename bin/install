@@ -1,0 +1,21 @@
+#! /usr/bin/env bash
+
+base_path=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+bashrc_path="$HOME"/.bashrc
+
+if ! grep -qE '^sbp_path=*' "$bashrc_path"; then
+  echo "SBP: adding sbp_path=${base_path} to ~/.bashrc"
+  echo "sbp_path=${base_path}" >> "$bashrc_path"
+else
+  # shellcheck disable=SC2154
+  echo "SBP: sbp_path has already been set to '$sbp_path'"
+fi
+
+if ! grep -qE "^(source|.) ${base_path}" "$bashrc_path"; then
+  echo "SBP: adding 'source ${base_path}/sbp.bash' to ~/.bashrc"
+  echo "source ${base_path}/sbp.bash" >> "$bashrc_path"
+else
+  echo "${base_path}/sbp.bash has already been set to be sourced"
+fi
+
+echo "SBP: You'll have to reload bash or source ~/.bashrc for changes to take effect"

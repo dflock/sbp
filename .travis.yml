@@ -1,9 +1,8 @@
 sudo: required
 dist: trusty
-language: haskell
-
-install:
-  - cabal install --disable-tests shellcheck
-
-script:
-  - shellcheck -x -s bash sbp.bash 
+language: bash
+cache:
+  directories:
+    - /home/travis/.stack
+before_install: ./bin/bootstrap
+script: ./bin/test
